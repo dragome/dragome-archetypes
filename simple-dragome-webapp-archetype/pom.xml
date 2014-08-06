@@ -7,6 +7,31 @@
   <version>1.0-SNAPSHOT</version>
   <name>app1</name>
 
+  <description>Dragome simple application archetype</description>
+  <url>http://www.dragome.com</url>
+
+  <licenses>
+    <license>
+      <name>GNU General Public License, Version 3</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0-standalone.html</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Fernando Petrola</name>
+      <email>fernando.petrola@dragome.com</email>
+      <organization>Dragome</organization>
+      <organizationUrl>http://www.dragome.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:dragome/dragome-sdk.git</connection>
+    <developerConnection>scm:git:git@github.com:dragome/dragome-sdk.git</developerConnection>
+    <url>git@github.com:dragome/dragome-sdk.git</url>
+  </scm>
+  
   <repositories>
     <repository>
       <id>JBOSS_NEXUS</id>
@@ -67,6 +92,48 @@
           </connectors>
         </configuration>
       </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
     </plugins>
   </build>
 </project>
