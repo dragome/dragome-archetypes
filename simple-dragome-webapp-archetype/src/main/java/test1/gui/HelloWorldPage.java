@@ -14,16 +14,16 @@ package test1.gui;
 import test1.service.HelloWorldService;
 
 import com.dragome.annotations.PageAlias;
-import com.dragome.debugging.execution.DragomeVisualActivity;
-import com.dragome.model.VisualButtonImpl;
-import com.dragome.model.VisualLabelImpl;
-import com.dragome.model.interfaces.VisualButton;
-import com.dragome.model.interfaces.VisualComponent;
-import com.dragome.model.interfaces.VisualLabel;
-import com.dragome.model.listeners.ClickListener;
+import com.dragome.guia.GuiaVisualActivity;
+import com.dragome.guia.components.VisualButtonImpl;
+import com.dragome.guia.components.VisualLabelImpl;
+import com.dragome.guia.components.interfaces.VisualButton;
+import com.dragome.guia.components.interfaces.VisualComponent;
+import com.dragome.guia.components.interfaces.VisualLabel;
+import com.dragome.guia.listeners.ClickListener;
 
 @PageAlias(alias= "hello-world")
-public class HelloWorldPage extends DragomeVisualActivity
+public class HelloWorldPage extends GuiaVisualActivity
 {
     HelloWorldService helloWorldService= serviceFactory.createSyncService(HelloWorldService.class);
 
