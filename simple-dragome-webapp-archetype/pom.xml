@@ -44,6 +44,18 @@
     </repository>
   </repositories>
 
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
 
     <dependency>
@@ -56,7 +68,7 @@
     <dependency>
       <groupId>com.dragome</groupId>
       <artifactId>dragome-sdk</artifactId>
-      <version>0.95.5-beta1</version>
+      <version>0.96-beta2</version>
       <type>pom</type>
     </dependency>
   </dependencies>
